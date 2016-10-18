@@ -1770,6 +1770,7 @@ function b64tohex(s) {
   var i;
   var k = 0; // b64 state, 0-3
   var slop;
+  var v;	
   for(i = 0; i < s.length; ++i) {
     if(s.charAt(i) == b64pad) break;
     v = b64map.indexOf(s.charAt(i));
@@ -2027,7 +2028,7 @@ JSX.extend = function(subc, superc, overrides) {
   * @name KJUR
  * @namespace kjur's class library name space
  */
-if (typeof KJUR == "undefined" || !KJUR) KJUR = {};
+if (typeof KJUR == "undefined" || !KJUR) var KJUR = {};
 
 /**
  * kjur's ASN.1 class library name space
